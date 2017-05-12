@@ -44,6 +44,7 @@ Credits:
 /* This is a small security for too long strings titles */
 body {
 	word-wrap: break-word;
+	margin:0;
 }
 
 /* Alignment */
@@ -188,15 +189,6 @@ display: block;
 .widget select {
 	max-width: 100%;
 }
-
-/* styles for _tk_pagination und _tk_link_pages */
-nav form.tk-page-nav,
-nav .input-group,
-nav .input-group-btn,
-nav .form-control {
-    display: inline;
-}
-
 /*Header*/
 .site-title{
 	margin-top:20px;
@@ -217,6 +209,9 @@ nav .form-control {
 	}
 }
 
+.row{
+	margin:0;
+}
 
 .row.navtop{
 	background-color:black;
@@ -327,15 +322,11 @@ h2.sans {
 	float: left;
 }
 
-.menu-footer ul{
-	 padding: 0;
-	list-style-type: none;
-}
-
-.menu-footer ul li{
-	float: left;
-	margin: 0;
-	padding: 0;
+.site-footer .fa {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 2.2em;
+  margin-right: 15px;
 }
 
 .follow-footer{
@@ -348,6 +339,67 @@ h2.sans {
 	font-size: 2.2em;
 	margin-right: 15px;
 }
+
+.menu {
+  right: -285px;
+  height: 100%;
+  width: 285px;
+  position: fixed;
+  z-index: 1;
+  background-color: #111111;
+  transition: 0.5s;
+  overflow: auto;
+}
+
+.menu ul {
+  border-top: 1px solid #636366;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #636366;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.menu a li {
+  color: white;
+  text-decoration: none;
+}
+
+.bar {
+  right: 0px;
+}
+
+.barmobile {
+  top: 0px;
+}
+
+.nav {
+  background: #07575B;
+  background: linear-gradient(to left, #07575B 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  border-right: solid #375E97;
+}
+
+.nav:hover {
+  background-position: right bottom;
+  text-decoration: none;
+  border-left: solid #375E97;
+  border-right: 0;
+}
+
+
+
+
 
 
 /*Header*/

@@ -24,7 +24,7 @@
 					<div class="menu-footer">Menu</div>
 					<div class="menu-footer">Menu</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 ">
 				<div class="follow-footer aligncenter">Follow Us</div>
 					<a href="#"><i class="fa fa-facebook-square"></i></a>
 					<a href="#"><i class="fa fa-twitter-square"></i></a>
@@ -32,7 +32,7 @@
 					<a href="#"><i class="fa fa-google-plus-square"></i></a>
 			</div>
 			<div class="col-md-4">
-				Contact Us
+				<p class="contact-footer alignright">Contact Us</p>
 		</div>
 	</div><!-- close .container -->
 </footer><!-- close #colophon -->

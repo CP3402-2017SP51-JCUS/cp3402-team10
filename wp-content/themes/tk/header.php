@@ -24,8 +24,18 @@
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
 
+	<div class="menu" id="menu">
+  <!-- Menu -->
+    <ul>
+      <a href="#" class="nav"><li>Home</li></a>
+      <a href="skills.html" class="nav"><li>About Me</li></a>
+      <a href="projects.html" class="nav"><li>Projects</li></a>
+    </ul>
+  </div>
+
 <header id="masthead" class="site-header" role="banner">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
+
 		<div class="row navtop">
 			<div class="site-header-inner col-sm-12">
 
@@ -36,10 +46,9 @@
 					</a>
 				<?php } // end if ( ! empty( $header_image ) ) ?>
 
-
 				<div class="site-branding">
 					<h1 class="site-title alignleft"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<div class="alignright menu-title">Menu<span class="glyphicon glyphicon-menu-hamburger"></span></div>
+					<div class="alignright menu-title" id="nav-toggle">Menu<span class="glyphicon glyphicon-menu-hamburger"></span></div>
 				</div>
 			</div>
 		</div>
@@ -56,10 +65,9 @@
 		<?php } ?>
 </header><!-- #masthead -->
 
-
-
 <div class="main-content">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
+
 	<div class="container">
 		<div class="row">
 			<div id="content" class="main-content-inner col-sm-12 col-md-8">

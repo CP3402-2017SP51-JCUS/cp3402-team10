@@ -4,7 +4,7 @@
  *
  * @package _tk
  */
- 
+
  /**
   * Store the theme's directory path and uri in constants
   */
@@ -58,7 +58,7 @@ function _tk_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 		) ) );
-	
+
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
@@ -166,3 +166,10 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
+
+/**Custom**/
+
+function my_theme_scripts() {
+    wp_enqueue_script( 'my-great-script', get_template_directory_uri() . '/includes/js/script.js', array( 'jquery' ), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
