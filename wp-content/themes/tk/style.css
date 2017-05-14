@@ -44,7 +44,7 @@ Credits:
 /* This is a small security for too long strings titles */
 body {
 	word-wrap: break-word;
-	margin:0;
+	margin-right: 0px;
 }
 
 /* Alignment */
@@ -194,6 +194,14 @@ display: block;
 	margin-top:20px;
 }
 
+#topbar{
+	width: 100%;
+	background-color: transparent;
+	margin:0 auto;
+	height: 5em;
+	position: fixed;
+}
+
 .glyphicon.glyphicon-menu-hamburger {
 	margin-left: 5px;
 	font-size: 24px;
@@ -213,13 +221,6 @@ display: block;
 	margin:0;
 }
 
-.row.navtop{
-	background-color:black;
-	width: 100%;
-	margin:0 auto;
-	height: 5em;
-}
-
 .site-header .site-title{
 	margin-top:15px;
 }
@@ -237,9 +238,8 @@ display: block;
 	text-decoration: none;
 }
 
-div .menu-title{
+.menu-title{
 	margin-top: 20px;
-	margin-right: 1em;
   font-size: 26px;
   color: white;
   cursor: pointer;
@@ -341,14 +341,14 @@ h2.sans {
 }
 
 .menu {
-  right: -285px;
+	display:block;
+	right: 0px;
   height: 100%;
-  width: 285px;
+  width: 0px;
   position: fixed;
   z-index: 1;
   background-color: #111111;
-  transition: 0.5s;
-  overflow: auto;
+  overflow-x: hidden;
 }
 
 .menu ul {
@@ -372,21 +372,14 @@ h2.sans {
   text-decoration: none;
 }
 
-.bar {
-  right: 0px;
-}
-
-.barmobile {
-  top: 0px;
-}
 
 .nav {
   background: #07575B;
   background: linear-gradient(to left, #07575B 50%, black 50%);
   background-size: 200% 100%;
   background-position: left bottom;
-  transition: all 0.2s ease-in-out;
   display: block;
+	transition: all 0.3s;
   border-right: solid #375E97;
 }
 
