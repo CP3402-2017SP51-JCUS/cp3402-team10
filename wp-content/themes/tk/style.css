@@ -146,7 +146,9 @@ object {
 
 /* Content */
 .main-content-inner {
+	width: 100%;
 	padding-bottom: 1.5em;
+
 }
 .hentry {
 	margin: 0 0 1.5em;
@@ -192,6 +194,7 @@ display: block;
 /*Header*/
 .site-title{
 	margin-top:20px;
+	cursor: pointer;
 }
 
 #topbar{
@@ -200,6 +203,7 @@ display: block;
 	margin:0 auto;
 	height: 5em;
 	position: fixed;
+	z-index: 1;
 }
 
 .glyphicon.glyphicon-menu-hamburger {
@@ -247,11 +251,9 @@ display: block;
 }
 
 #masthead {
-  background-color: #2D4262;
   background-repeat: no-repeat;
   margin: 0;
   padding:0;
-
 }
 
 h2.sans {
@@ -327,17 +329,15 @@ h2.sans {
   vertical-align: middle;
   font-size: 2.2em;
   margin-right: 15px;
+	color: black;
 }
 
 .follow-footer{
 	text-align: center;
 }
 
-.follow-footer .fa{
+.fa{
 	display: inline-block;
-	color: #444;
-	font-size: 2.2em;
-	margin-right: 15px;
 }
 
 .menu {
@@ -390,7 +390,9 @@ h2.sans {
   border-right: 0;
 }
 
-
+.about-front-page{
+	background-color: black;
+}
 
 
 

@@ -41,19 +41,26 @@
 
 				<?php $header_image = get_header_image();
 				if ( ! empty( $header_image ) ) { ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-					</a>
-				<?php } // end if ( ! empty( $header_image ) ) ?>
+					<style type="text/css">
+						#masthead{
+							background: url( <?php echo esc_url( $header_image ); ?>);
+							background-repeat: no-repeat;
+							background-size: cover;
+							width: 100%;
+							min-height: 100%;
+						}
 
-				<div class="site-branding">
-					<h1 class="site-title alignleft"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<div class="alignright menu-title" id="nav-toggle">Menu<span class="glyphicon glyphicon-menu-hamburger" id="menu-icon"></span></div>
-				</div>
+					</style>
+				<?php } ?>
+
+					<div class="site-branding">
+						<h1 class="site-title alignleft"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<div class="alignright menu-title" id="nav-toggle">Menu<span class="glyphicon glyphicon-menu-hamburger" id="menu-icon"></span></div>
+					</div>
+
+
 			</div>
 		</div>
-
-		<?php if(is_front_page()) {?>
 		<div class="row">
 			<h2 class="sans"><?php echo bloginfo( 'name' ); ?></h2>
       <h3 class="sans"><?php echo bloginfo( 'description' ); ?></h3>
@@ -62,7 +69,7 @@
 					<li><a class="jumbobutton" href="#">Video</a></li>
 					<li><a class="jumbobutton" href="#">See Our Work</a></li>
 		</div>
-		<?php } ?>
+
 </header><!-- #masthead -->
 
 <div class="main-content">
@@ -70,8 +77,4 @@
 
 	<div class="container">
 		<div class="row">
-			<div id="content" class="main-content-inner col-sm-12 col-md-8">
-				<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
-				<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
-				<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
-				<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+			<div id="content" class="main-content-inner col-sm-12 col-md-12">
