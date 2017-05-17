@@ -203,7 +203,7 @@ display: block;
 	margin:0 auto;
 	height: 5em;
 	position: fixed;
-	z-index: 1;
+	z-index: 999;
 }
 
 .glyphicon.glyphicon-menu-hamburger {
@@ -212,13 +212,7 @@ display: block;
 }
 
 .site-header{
-	height: calc(768px - 5.5em);
-}
-
-@media (min-width: 1600px) {
-	.site-header{
-		height: calc(1080px - 5.5em);
-	}
+	height: 100%;
 }
 
 .row{
@@ -254,6 +248,8 @@ display: block;
   background-repeat: no-repeat;
   margin: 0;
   padding:0;
+	height: 100%;
+	width:100%;
 }
 
 h2.sans {
@@ -271,6 +267,7 @@ h2.sans {
   font-size: 28px;
   text-decoration: none;
   color: white;
+	opacity: 1;
 }
 
 .header-btn{
@@ -392,6 +389,17 @@ h2.sans {
 
 .about-front-page{
 	background-color: black;
+}
+
+#header-video {
+	z-index:-100;
+	width: 100%;
+	height: auto;
+	z-index: -100;
+	display: inline-block;
+	background-size:cover;
+	position: absolute;
+	overflow:hidden;
 }
 
 

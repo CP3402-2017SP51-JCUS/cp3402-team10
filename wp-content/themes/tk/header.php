@@ -36,39 +36,46 @@
 <header id="masthead" class="site-header" role="banner">
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
 
+	<?php $header_image = get_header_image();
+	if ( ! empty( $header_image ) ) { ?>
+		<style type="text/css">
+			#masthead{
+				background-repeat: no-repeat;
+				background-size: cover;
+				background: url( <?php echo esc_url( $header_image ); ?>);
+				width: 100%;
+				z-index: -100;
+				min-height: 100%;
+			}
+		</style>
+	<?php } else if(has_header_video()){ ?>
+		<div class="video-bg">
+			<video id="header-video" autoplay loop muted src="<?php echo esc_url(the_header_video_url()); ?>">
+			</video>
+		</div>
+	<?php } ?>
+
+
 		<div class="row" id="topbar">
 			<div class="site-header-inner col-sm-12">
-
-				<?php $header_image = get_header_image();
-				if ( ! empty( $header_image ) ) { ?>
-					<style type="text/css">
-						#masthead{
-							background: url( <?php echo esc_url( $header_image ); ?>);
-							background-repeat: no-repeat;
-							background-size: cover;
-							width: 100%;
-							min-height: 100%;
-						}
-
-					</style>
-				<?php } ?>
-
-					<div class="site-branding">
-						<h1 class="site-title alignleft"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-						<div class="alignright menu-title" id="nav-toggle">Menu<span class="glyphicon glyphicon-menu-hamburger" id="menu-icon"></span></div>
-					</div>
-
-
-			</div>
+				<div class="site-branding">
+					<h1 class="site-title alignleft"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<div class="alignright menu-title" id="nav-toggle">Menu<span class="glyphicon glyphicon-menu-hamburger" id="menu-icon"></span></div>
+				</div>
+		  </div>
 		</div>
+
 		<div class="row">
 			<h2 class="sans"><?php echo bloginfo( 'name' ); ?></h2>
-      <h3 class="sans"><?php echo bloginfo( 'description' ); ?></h3>
+			<h3 class="sans"><?php echo bloginfo( 'description' ); ?></h3>
 			<div class="header-btn">
 				<ul>
 					<li><a class="jumbobutton" href="#">Video</a></li>
 					<li><a class="jumbobutton" href="#">See Our Work</a></li>
+			</div>
 		</div>
+
+
 
 </header><!-- #masthead -->
 

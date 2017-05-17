@@ -4,7 +4,7 @@
  *
  * @package _tk
  */
-
+ @ini_set( 'upload_max_size' , '64M' );
  /**
   * Store the theme's directory path and uri in constants
   */
@@ -196,3 +196,7 @@ function add_jquery_ui() {
     wp_enqueue_script( 'jquery-ui-button' );
 }
 add_action( 'wp_enqueue_scripts', 'add_jquery_ui' );
+
+add_theme_support( 'custom-header', array(
+ 'video' => true,
+) );
