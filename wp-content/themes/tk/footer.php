@@ -31,10 +31,10 @@
 			</div>
 			<div class="col-md-4 ">
 				<div class="follow-footer aligncenter">Follow Us</div>
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-facebook-square"></i></a>
+					<a href="#"><i class="fa fa-twitter-square"></i></a>
 					<a href="#"><i class="fa fa-instagram"></i></a></li>
-					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-google-plus-square"></i></a>
 			</div>
 			<div class="col-md-4">
 				<p class="contact-footer alignright">Contact Us</p>
