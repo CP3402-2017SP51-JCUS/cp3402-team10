@@ -44,7 +44,7 @@ header("Access-Control-Allow-Origin: *");
 
 	<div id="topbar">
 		<?php if(has_site_icon()) { ?>
-			<img class="site-icon alignleft" src="<?php site_icon_url()?>">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="site-icon alignleft" src="<?php site_icon_url()?>"></a>
 		<?php } else{ ?>
 			<h1 class="site-title alignleft"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<?php } ?>

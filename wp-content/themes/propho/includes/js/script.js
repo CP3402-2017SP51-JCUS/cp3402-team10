@@ -18,12 +18,10 @@ jQuery('body').click(function(e) {
       console.log('menu');
    }
   else{
-    if( jQuery('.menu').css('width') == '285px') {
       jQuery('.menu').animate({ 'width': '0px' }, 300);
       jQuery('body').animate({ 'margin-right': '0px' }, 300);
       jQuery('.menu-title').animate({'margin-right': '1em'}, 300);
-      console.log("A");
-    }
+      console.log("C");
   }
 });
 //Sidebar Menu//
