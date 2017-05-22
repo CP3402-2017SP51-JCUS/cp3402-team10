@@ -107,6 +107,7 @@ object {
 	z-index: 100000; /* Above WP toolbar */
 }
 
+
 /* Content */
 .main-content-inner {
 	width: 100%;
@@ -257,6 +258,11 @@ h2.sans {
 .header-btn ul li a:hover{
 	text-decoration: none;
 	color: black;
+}
+
+.site-footer{
+	background-color: #252839;
+	color: white;
 }
 
 .menu {
@@ -413,14 +419,6 @@ ul{
 
 .contact-item{
 	margin-right: 30px;
-}
-
-.site-footer{
-	background-color: #252839;
-	color: white;
-	position:absolute;
-	bottom: 0;
-	width:100%;
 }
 
 
